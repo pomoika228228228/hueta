@@ -1,5 +1,10 @@
 from tkinter import *
 
+def AnyKey():
+    print("knopka shmyaknuta")
+    label.configure(text='ХА НАЕБАЛ')
+
+
 # создаём оно программы
 root = Tk("Моя программа")
 # работаем с окном
@@ -22,7 +27,9 @@ frame2['bg'] = 'red'
 frame3 = Frame(root,padx=37,pady=26,width=200,height=70)
 frame3.place(anchor="center", relx=0.5, rely=0.5)
 frame3['bg'] = 'blue'
-Button(frame3,text="служба по контракту").pack()
+label = Label(frame3,text='Заголовок')
+label.grid(column=0,row=0)
+Button(frame3,text="служба по контракту", command=AnyKey).grid(column=0,row=1)
 
 
 
